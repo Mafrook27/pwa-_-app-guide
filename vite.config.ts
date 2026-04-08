@@ -17,7 +17,6 @@ try {
 console.log("Building with version:", commitHash);
 
 export default defineConfig({
-  base: '/guides/',
   plugins: [
     react(),
     tailwindcss(),

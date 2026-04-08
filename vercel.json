@@ -3,11 +3,7 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/guides/((?!assets|api|favicon).*)",
-      "destination": "/guides/index.html"
-    },
-    {
-      "source": "/((?!assets|api|favicon).*)",
+      "source": "/((?!assets|api|favicon\\.ico).*)",
       "destination": "/index.html"
     }
   ]

@@ -43,8 +43,6 @@ const router = createBrowserRouter([
     path: "/inline-email-composer",
     element: <InlineEmailComposerPage />,
   },
-], {
-  basename: "/guides"
-});
+]);
 
 export const AppRouter = () => <RouterProvider router={router} />;
