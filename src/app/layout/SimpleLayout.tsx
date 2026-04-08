@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { Menu, X, FileText, Smartphone } from "lucide-react";
+import { Menu, X, FileText, Smartphone, Mail, Edit3, FileEdit } from "lucide-react";
 
 export default function SimpleLayout() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,6 +44,36 @@ export default function SimpleLayout() {
                                 <FileText className="w-5 h-5" />
                                 <span>Portal Guide</span>
                             </Link>
+                            <Link
+                                to="/form-editor"
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive("/form-editor")
+                                    ? "bg-blue-600 text-white"
+                                    : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                    }`}
+                            >
+                                <FileEdit className="w-5 h-5" />
+                                <span>Form Editor</span>
+                            </Link>
+                            <Link
+                                to="/email-editor"
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive("/email-editor")
+                                    ? "bg-blue-600 text-white"
+                                    : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                    }`}
+                            >
+                                <Mail className="w-5 h-5" />
+                                <span>Email Editor</span>
+                            </Link>
+                            <Link
+                                to="/inline-email-composer"
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${isActive("/inline-email-composer")
+                                    ? "bg-blue-600 text-white"
+                                    : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                    }`}
+                            >
+                                <Edit3 className="w-5 h-5" />
+                                <span>Inline Composer</span>
+                            </Link>
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -85,6 +115,39 @@ export default function SimpleLayout() {
                                 >
                                     <FileText className="w-5 h-5" />
                                     <span className="font-medium">Portal Guide</span>
+                                </Link>
+                                <Link
+                                    to="/form-editor"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive("/form-editor")
+                                        ? "bg-blue-600 text-white"
+                                        : "text-gray-700 hover:bg-blue-50"
+                                        }`}
+                                >
+                                    <FileEdit className="w-5 h-5" />
+                                    <span className="font-medium">Form Editor</span>
+                                </Link>
+                                <Link
+                                    to="/email-editor"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive("/email-editor")
+                                        ? "bg-blue-600 text-white"
+                                        : "text-gray-700 hover:bg-blue-50"
+                                        }`}
+                                >
+                                    <Mail className="w-5 h-5" />
+                                    <span className="font-medium">Email Editor</span>
+                                </Link>
+                                <Link
+                                    to="/inline-email-composer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive("/inline-email-composer")
+                                        ? "bg-blue-600 text-white"
+                                        : "text-gray-700 hover:bg-blue-50"
+                                        }`}
+                                >
+                                    <Edit3 className="w-5 h-5" />
+                                    <span className="font-medium">Inline Composer</span>
                                 </Link>
                             </div>
                         </div>
